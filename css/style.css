@@ -21,9 +21,9 @@
 /* BASE STYLES
 /*******************************************/
 
-/* body {
-
-} */
+body {
+  background-color:rgb(8, 143, 98);
+}
 
 
 /******************************************
@@ -40,8 +40,12 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+h1 {
+  margin: 0;
+  text-align: center;
+}
 #mapDiv { 
-  height: 85vh;
+  height: 90vh;
   width: 95%;
   margin: 0 auto;
   border: 1px solid limegreen;
