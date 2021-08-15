@@ -1,4 +1,5 @@
 const currLatLong = [51.3173, -0.5578]
+const NZLatLong = [-37.28695, 175.9043]
 
 let Stadia_AlidadeSmoothDark = L.tileLayer(
   'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
@@ -14,4 +15,5 @@ window.onload = function() {
 
   map.addLayer(Stadia_AlidadeSmoothDark);
   L.marker(currLatLong).addTo(map);
+  L.marker(NZLatLong).addTo(map);
 };
