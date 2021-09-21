@@ -6,7 +6,8 @@ const places = [
           { place: 'Brookwood - Work', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
           { place: 'Woking - Rando 1', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
           { place: 'Woking - Rando 2', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
-          { place: 'Woking - Rando 3', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'}]
+          { place: 'Woking - Rando 3', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'},
+          { place: 'Woking - Rando 4', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: ''}]
 
 let Stadia_AlidadeSmoothDark = L.tileLayer(
   'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
@@ -24,7 +25,15 @@ window.onload = function() {
   map.addLayer(Stadia_AlidadeSmoothDark);
 
   places.forEach(p => {
-    let myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [21, 21] });
+
+    let myIcon
+    if (p.icon!=''){
+      myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [21, 21] });
+    } else {
+      console.log(p.place,p.icon)
+      myIcon = L.icon({ iconUrl: `./images/pin-default.png`, iconSize: [21, 21] });
+      console.log(myIcon)
+    }
     return L.marker([p.lat,p.long],{opacity:1, title: `${p.place}  ///${p.w3w}`, icon: myIcon})
             .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
             .addTo(map)})
