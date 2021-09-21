@@ -20,7 +20,8 @@ window.onload = function() {
 
   map.addLayer(Stadia_AlidadeSmoothDark);
 
-  places.forEach(p => L.marker([p.lat,p.long])
+  places.forEach(p => L.marker([p.lat,p.long],{opacity:0.5, 
+                                               title: `${p.place}  ///${p.w3w}`})
                        .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
                        .addTo(map))
 };
