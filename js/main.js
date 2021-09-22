@@ -18,6 +18,7 @@ let Stadia_AlidadeSmoothDark = L.tileLayer(
 window.onload = function() {
   let map = L.map("mapDiv", {
     center: [places[0].lat,places[0].long],
+    //center: [51.3173, -0.5578],
     //center: [places[places.length-1].lat,places[places.length-1].long],
     zoom: 15,
   })
@@ -25,15 +26,10 @@ window.onload = function() {
   map.addLayer(Stadia_AlidadeSmoothDark);
 
   places.forEach(p => {
-
     let myIcon
-    if (p.icon!=''){
-      myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [21, 21] });
-    } else {
-      console.log(p.place,p.icon)
-      myIcon = L.icon({ iconUrl: `./images/pin-default.png`, iconSize: [21, 21] });
-      console.log(myIcon)
-    }
+    if (p.icon!=''){ myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [21, 21] }) }
+    else { myIcon = L.icon({ iconUrl: `./images/pin-default.png`, iconSize: [21, 21] }) }
+    
     return L.marker([p.lat,p.long],{opacity:1, title: `${p.place}  ///${p.w3w}`, icon: myIcon})
             .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
             .addTo(map)})
