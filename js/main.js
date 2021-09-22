@@ -36,22 +36,31 @@ window.onload = function() {
 
 places.forEach(p => {
   let placeDiv = document.createElement("div")
+  let placeLeftColDiv = document.createElement("div")
+  let placeRightColDiv = document.createElement("div")
   let placeHeaderDiv = document.createElement("div")
   let placeLatLongDiv = document.createElement("div")
   let placeW3WDiv = document.createElement("div")
+  let placeIconDiv = document.createElement("div")
 
   placeHeaderDiv.innerText = `${p.place}`
   placeLatLongDiv.innerText = `Lat: ${p.lat} / Long: ${p.long}`
-  placeW3WDiv.innerText = `${p.w3w}`
+  placeW3WDiv.innerText = `w3w: ${p.w3w}`
+  placeIconDiv.innerText = `${p.icon}`
 
-  placeDiv.appendChild(placeHeaderDiv)
-  placeDiv.appendChild(placeLatLongDiv)
-  placeDiv.appendChild(placeW3WDiv)
+  placeLeftColDiv.appendChild(placeHeaderDiv)
+  placeLeftColDiv.appendChild(placeLatLongDiv)
+  placeLeftColDiv.appendChild(placeW3WDiv)
+  
+  placeRightColDiv.appendChild(placeIconDiv)
 
   placeHeaderDiv.classList.add("placeHeaderDiv")
   placeLatLongDiv.classList.add("placeLatLongDiv")
   placeW3WDiv.classList.add("placeW3WDiv")
   placeDiv.classList.add("placeDiv")
+
+  placeDiv.appendChild(placeLeftColDiv)
+  placeDiv.appendChild(placeRightColDiv)
 
   document.getElementById("leftNav").appendChild(placeDiv)
 })
