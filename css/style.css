@@ -53,7 +53,7 @@ h1 {
 
 #layoutMain {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 15% 85%;
  }
 .placeDiv{
   border: 1px solid blue;
@@ -68,4 +68,11 @@ h1 {
 .placeLatLongDiv, .placeW3WDiv{
   font-style: italic;
   padding-left: 10px;
+  font-size: small;
+}
+.placeRightColDiv{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid red;
 }
