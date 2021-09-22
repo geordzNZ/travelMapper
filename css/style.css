@@ -45,7 +45,7 @@ h1 {
   text-align: center;
 }
 #mapDiv { 
-  height: 90vh;
+  height: 94vh;
   width: 98%;
   margin: 0 auto;
   border: 1px solid limegreen;
@@ -53,14 +53,20 @@ h1 {
 
 #layoutMain {
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 20% 80%;
  }
+#leftNav{
+  overflow-y: scroll;
+  /* overflow-x: hidden; */
+  height: 94vh;
+}
 .placeDiv{
   border: 1px solid blue;
   border-radius: 5px;
   margin: 0 0 2px 5px;
   display: grid;
   grid-template-columns: 80% 20%;
+  width: 95%;
 }
 .placeHeaderDiv{
   font-weight: bold;
@@ -68,11 +74,31 @@ h1 {
 .placeLatLongDiv, .placeW3WDiv{
   font-style: italic;
   padding-left: 10px;
-  font-size: small;
 }
 .placeRightColDiv{
-  display: table-cell;
-  vertical-align: middle;
   text-align: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+img{
+  margin: 12px 0;
+  /* border: 1px solid red; */
+}
+
+/* SCROLL BAR CHANGES */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px yellow; */
+  background: lightblue;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
 }
