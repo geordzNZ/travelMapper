@@ -33,4 +33,28 @@ window.onload = function() {
     return L.marker([p.lat,p.long],{opacity:1, title: `${p.place}  ///${p.w3w}`, icon: myIcon})
             .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
             .addTo(map)})
+
+places.forEach(p => {
+  let placeDiv = document.createElement("div")
+  let placeHeaderDiv = document.createElement("div")
+  let placeLatLongDiv = document.createElement("div")
+  let placeW3WDiv = document.createElement("div")
+
+  placeHeaderDiv.innerText = `${p.place}`
+  placeLatLongDiv.innerText = `Lat: ${p.lat} / Long: ${p.long}`
+  placeW3WDiv.innerText = `${p.w3w}`
+
+  placeDiv.appendChild(placeHeaderDiv)
+  placeDiv.appendChild(placeLatLongDiv)
+  placeDiv.appendChild(placeW3WDiv)
+
+  placeHeaderDiv.classList.add("placeHeaderDiv")
+  placeLatLongDiv.classList.add("placeLatLongDiv")
+  placeW3WDiv.classList.add("placeW3WDiv")
+  placeDiv.classList.add("placeDiv")
+
+  document.getElementById("leftNav").appendChild(placeDiv)
+})
 };
+
+//{ place: 'Woking - Home', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
