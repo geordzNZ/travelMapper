@@ -2,7 +2,7 @@ const places = [
           { placeId: 1, place: 'Woking - Home', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
           { placeId: 2, place: 'Whiritoa', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow'},
           { placeId: 3, place: 'Woking - ex-SAB House', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1'},
-          { placeId: 4, place: 'Auckland NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
+          { placeId: 4, place: 'Auckland', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
           { placeId: 5, place: 'Brookwood - Work', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
           { placeId: 6, place: 'Woking - Rando 1', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
           { placeId: 7, place: 'Woking - Rando 2', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
@@ -11,7 +11,7 @@ const places = [
           { placeId: 10, place: 'Woking - Home', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
           { placeId: 11, place: 'Whiritoa', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow'},
           { placeId: 12, place: 'Woking - ex-SAB House', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1'},
-          { placeId: 13, place: 'Auckland NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
+          { placeId: 13, place: 'Auckland', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
           { placeId: 14, place: 'Brookwood - Work', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
           { placeId: 15, place: 'Woking - Rando 1', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
           { placeId: 16, place: 'Woking - Rando 2', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
@@ -39,7 +39,7 @@ window.onload = function() {
     if (p.icon!=''){ myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [25, 25] }) }
     else { myIcon = L.icon({ iconUrl: `./images/pin-default.png`, iconSize: [25, 25] }) }
     
-    return L.marker([p.lat,p.long],{opacity:1, title: `${p.place}  ///${p.w3w}`, icon: myIcon})
+    return L.marker([p.lat,p.long],{opacity:1, title: `${p.place} ///${p.w3w}`, icon: myIcon})
             .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
             .addTo(map)})
 
@@ -84,5 +84,3 @@ places.forEach(p => {
   document.getElementById("leftNav").appendChild(placeDiv)
 })
 };
-
-//{ place: 'Woking - Home', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},

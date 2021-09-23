@@ -61,6 +61,7 @@ h1 {
   height: 94vh;
 }
 .placeDiv{
+  background: hsla(240,50%,30%,0.2);
   border: 1px solid blue;
   border-radius: 5px;
   margin: 0 0 2px 5px;
