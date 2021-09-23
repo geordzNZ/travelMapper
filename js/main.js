@@ -1,22 +1,22 @@
 const places = [
-          { placeId: 1, place: 'Woking - Home', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
-          { placeId: 2, place: 'Whiritoa', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow'},
-          { placeId: 3, place: 'Woking - ex-SAB House', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1'},
-          { placeId: 4, place: 'Auckland', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
-          { placeId: 5, place: 'Brookwood - Work', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
-          { placeId: 6, place: 'Woking - Rando 1', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
-          { placeId: 7, place: 'Woking - Rando 2', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
-          { placeId: 8, place: 'Woking - Rando 3', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'},
-          { placeId: 9, place: 'Woking - Rando 4', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: ''},
-          { placeId: 10, place: 'Woking - Home', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
-          { placeId: 11, place: 'Whiritoa', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow'},
-          { placeId: 12, place: 'Woking - ex-SAB House', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1'},
-          { placeId: 13, place: 'Auckland', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
-          { placeId: 14, place: 'Brookwood - Work', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
-          { placeId: 15, place: 'Woking - Rando 1', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
-          { placeId: 16, place: 'Woking - Rando 2', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
-          { placeId: 17, place: 'Woking - Rando 3', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'},
-          { placeId: 18, place: 'Woking - Rando 4', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: ''}]
+  { placeId: 1, place: 'Woking - Home', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
+  { placeId: 2, place: 'Whiritoa', country: 'UK', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow'},
+  { placeId: 3, place: 'Woking - ex-SAB House', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1'},
+  { placeId: 4, place: 'Auckland', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
+  { placeId: 5, place: 'Brookwood - Work', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
+  { placeId: 6, place: 'Woking - Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
+  { placeId: 7, place: 'Woking - Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
+  { placeId: 8, place: 'Woking - Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'},
+  { placeId: 9, place: 'Woking - Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: ''},
+  { placeId: 10, place: 'Woking - Home', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
+  { placeId: 11, place: 'Whiritoa', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow'},
+  { placeId: 12, place: 'Woking - ex-SAB House', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1'},
+  { placeId: 13, place: 'Auckland', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
+  { placeId: 14, place: 'Brookwood - Work', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
+  { placeId: 15, place: 'Woking - Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
+  { placeId: 16, place: 'Woking - Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
+  { placeId: 17, place: 'Woking - Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'},
+  { placeId: 18, place: 'Woking - Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: ''}]
 
 let Stadia_AlidadeSmoothDark = L.tileLayer(
   'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
@@ -39,7 +39,7 @@ window.onload = function() {
     if (p.icon!=''){ myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [25, 25] }) }
     else { myIcon = L.icon({ iconUrl: `./images/pin-default.png`, iconSize: [25, 25] }) }
     
-    return L.marker([p.lat,p.long],{opacity:1, title: `${p.place} ///${p.w3w}`, icon: myIcon})
+    return L.marker([p.lat,p.long],{opacity:1, title: `${p.place} (${p.country})  ///${p.w3w}`, icon: myIcon})
             .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
             .addTo(map)})
 
@@ -53,7 +53,7 @@ places.forEach(p => {
   let placeIconDiv = document.createElement("div")
   let placeIconImg = document.createElement("img")
 
-  placeHeaderDiv.innerText = `${p.place}`
+  placeHeaderDiv.innerText = `${p.place} (${p.country})`
   placeLatLongDiv.innerText = `Lat: ${p.lat} / Long: ${p.long}`
   placeW3WDiv.innerText = `w3w: ${p.w3w}`
 
