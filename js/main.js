@@ -24,6 +24,7 @@ let Stadia_AlidadeSmoothDark = L.tileLayer(
     attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
 
 
+
 window.onload = function() {
   let map = L.map("mapDiv", {
     center: [places[0].lat,places[0].long],
@@ -80,7 +81,12 @@ places.forEach(p => {
 
   placeDiv.appendChild(placeLeftColDiv)
   placeDiv.appendChild(placeRightColDiv)
+  placeDiv.addEventListener('click',clickedPlace)
 
   document.getElementById("leftNav").appendChild(placeDiv)
 })
 };
+
+function clickedPlace() {
+  alert("Hello")
+}
