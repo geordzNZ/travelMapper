@@ -75,6 +75,9 @@ h1 {
   width: 95%;
   padding: 0 0 0 10px;
 }
+.Home {
+  background: Blue;
+}
 .placeHeaderDiv{
   font-weight: bold;
 }

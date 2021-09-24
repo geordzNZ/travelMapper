@@ -68,11 +68,12 @@ function addNavBarItems(){
     placeRightColDiv.appendChild(placeIconImg)
 
     placeDiv.classList.add("placeDiv")
+    if (p.tag==='Home') { placeDiv.classList.add("placeHome") }
+    if (p.tag==='Work') { placeDiv.classList.add("placeWork") }
     placeHeaderDiv.classList.add("placeHeaderDiv")
     placeLatLongDiv.classList.add("placeLatLongDiv")
     placeW3WDiv.classList.add("placeW3WDiv")
     placeRightColDiv.classList.add("placeRightColDiv")
-    
     placeHeaderDiv.id = p.placeId
     placeIconImg.id = p.placeId
     placeHeaderDiv.addEventListener('click',clickedPlace)
