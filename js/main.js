@@ -49,7 +49,6 @@ function addNavBarItems(){
     let placeHeaderDiv = document.createElement("div")
     let placeLatLongDiv = document.createElement("div")
     let placeW3WDiv = document.createElement("div")
-    let placeIconDiv = document.createElement("div")
     let placeIconImg = document.createElement("img")
 
     placeHeaderDiv.innerText = `${p.place} (${p.country})`
@@ -66,19 +65,18 @@ function addNavBarItems(){
     placeLeftColDiv.appendChild(placeLatLongDiv)
     placeLeftColDiv.appendChild(placeW3WDiv)
     
-    placeIconDiv.appendChild(placeIconImg)
-
-    placeRightColDiv.appendChild(placeIconDiv)
+    placeRightColDiv.appendChild(placeIconImg)
 
     placeDiv.classList.add("placeDiv")
     placeHeaderDiv.classList.add("placeHeaderDiv")
     placeLatLongDiv.classList.add("placeLatLongDiv")
     placeW3WDiv.classList.add("placeW3WDiv")
-    placeIconDiv.classList.add("placeIconDiv")
     placeRightColDiv.classList.add("placeRightColDiv")
     
     placeHeaderDiv.id = p.placeId
+    placeIconImg.id = p.placeId
     placeHeaderDiv.addEventListener('click',clickedPlace)
+    placeIconImg.addEventListener('click',clickedPlace)
 
     placeDiv.appendChild(placeLeftColDiv)
     placeDiv.appendChild(placeRightColDiv)
