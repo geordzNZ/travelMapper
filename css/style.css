@@ -67,7 +67,7 @@ h1 {
 .placeDiv{
   /* cursor: pointer; */
   background: rgba(105, 105, 155, 0.3);
-  border: 1px solid blue;
+  border: 1px solid limegreen;
   border-radius: 5px;
   margin: 0 0 5px 10px;
   display: grid;
@@ -106,6 +106,8 @@ img:hover{
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  border: 1px solid limegreen;
+  border-radius: 10px;
 }
 
 /* Track */
