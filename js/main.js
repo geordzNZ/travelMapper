@@ -47,12 +47,12 @@ function addNavBarItems(){
     let placeLeftColDiv = document.createElement("div")
     let placeRightColDiv = document.createElement("div")
     let placeHeaderDiv = document.createElement("div")
-    let placeLatLongDiv = document.createElement("div")
+    let placeSubNameDiv = document.createElement("div")
     let placeW3WDiv = document.createElement("div")
     let placeIconImg = document.createElement("img")
 
     placeHeaderDiv.innerText = `${p.placeName} (${p.country})`
-    placeLatLongDiv.innerText = `${p.placeSubName || ''}`
+    placeSubNameDiv.innerText = `${p.placeSubName || ''}`
     placeW3WDiv.innerText = `w3w: ${p.w3w}`
 
     if (p.icon!=''){ placeIconImg.src = `./images/${p.icon}.png` }
@@ -62,7 +62,7 @@ function addNavBarItems(){
     placeIconImg.title = `Icon for ${p.placeName}`
 
     placeLeftColDiv.appendChild(placeHeaderDiv)
-    placeLeftColDiv.appendChild(placeLatLongDiv)
+    placeLeftColDiv.appendChild(placeSubNameDiv)
     placeLeftColDiv.appendChild(placeW3WDiv)
     
     placeRightColDiv.appendChild(placeIconImg)
@@ -71,11 +71,14 @@ function addNavBarItems(){
     if (p.tag==='Home') { placeDiv.classList.add("placeHome") }
     if (p.tag==='Work') { placeDiv.classList.add("placeWork") }
     placeHeaderDiv.classList.add("placeHeaderDiv")
-    placeLatLongDiv.classList.add("placeLatLongDiv")
+    placeSubNameDiv.classList.add("placeSubNameDiv")
     placeW3WDiv.classList.add("placeW3WDiv")
     placeRightColDiv.classList.add("placeRightColDiv")
-    placeHeaderDiv.id = p.placeId
-    placeIconImg.id = p.placeId
+
+
+    placeHeaderDiv.setAttribute('data-id', p.placeId)
+    placeIconImg.setAttribute('data-id', p.placeId)
+
     placeHeaderDiv.addEventListener('click',clickedPlace)
     placeIconImg.addEventListener('click',clickedPlace)
 
@@ -98,5 +101,6 @@ function addMapMarkers() {
 }
 
 function clickedPlace(e) {
-  map.panTo([places[e.target.id-1].lat, places[e.target.id-1].long])
+  let selectedPlaceID = e.target.getAttribute('data-id')
+  map.panTo([places[selectedPlaceID-1].lat, places[selectedPlaceID-1].long])
 }
