@@ -1,22 +1,22 @@
 const places = [
-  { placeId: 1, place: 'Woking - Home', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
-  { placeId: 2, place: 'Whiritoa', country: 'UK', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow'},
-  { placeId: 3, place: 'Woking - ex-SAB House', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1'},
-  { placeId: 4, place: 'Auckland', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
-  { placeId: 5, place: 'Brookwood - Work', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
-  { placeId: 6, place: 'Woking - Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
-  { placeId: 7, place: 'Woking - Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
-  { placeId: 8, place: 'Woking - Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'},
-  { placeId: 9, place: 'Woking - Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: ''},
-  { placeId: 10, place: 'Woking - Home', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow'},
-  { placeId: 11, place: 'Whiritoa', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow'},
-  { placeId: 12, place: 'Woking - ex-SAB House', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1'},
-  { placeId: 13, place: 'Auckland', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow'}, 
-  { placeId: 14, place: 'Brookwood - Work', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow'},
-  { placeId: 15, place: 'Woking - Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2'},
-  { placeId: 16, place: 'Woking - Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3'},
-  { placeId: 17, place: 'Woking - Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'},
-  { placeId: 18, place: 'Woking - Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: ''}]
+  { placeId: 1, placeName: 'Woking', placeSubName: 'The Exchange', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow', tag: 'Home'},
+  { placeId: 2, placeName: 'Whiritoa', placeSubName: '', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow', tag: ''},
+  { placeId: 3, placeName: 'Woking', placeSubName: 'ex-SAB House', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1', tag: ''},
+  { placeId: 4, placeName: 'West Auckland', placeSubName: '', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow', tag: ''}, 
+  { placeId: 5, placeName: 'Brookwood', placeSubName: '', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow', tag: 'Work'},
+  { placeId: 6, placeName: 'Woking', placeSubName: 'Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2', tag: ''},
+  { placeId: 7, placeName: 'Woking', placeSubName: 'Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3', tag: ''},
+  { placeId: 8, placeName: 'Woking', placeSubName: 'Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black', tag: ''},
+  { placeId: 9, placeName: 'Woking', placeSubName: 'Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: '', tag: ''},
+  { placeId: 10, placeName: 'Woking', placeSubName: 'The Exchange', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow', tag: 'Home'},
+  { placeId: 11, placeName: 'Whiritoa', placeSubName: '', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow', tag: ''},
+  { placeId: 12, placeName: 'Woking - ex-SAB House', placeSubName: '', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1', tag: ''},
+  { placeId: 13, placeName: 'Auckland', placeSubName: '', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow', tag: ''}, 
+  { placeId: 14, placeName: 'Brookwood', placeSubName: '', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow', tag: 'Work'},
+  { placeId: 15, placeName: 'Woking', placeSubName: 'Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2', tag: 'Rando 1'},
+  { placeId: 16, placeName: 'Woking', placeSubName: 'Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3', tag: 'Rando 2'},
+  { placeId: 17, placeName: 'Woking', placeSubName: 'Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black', tag: 'Rando 3'},
+  { placeId: 18, placeName: 'Woking', placeSubName: 'Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: '', tag: 'Rando 4'}]
 
   let Stadia_AlidadeSmoothDark = L.tileLayer(
     'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
@@ -51,15 +51,15 @@ function addNavBarItems(){
     let placeW3WDiv = document.createElement("div")
     let placeIconImg = document.createElement("img")
 
-    placeHeaderDiv.innerText = `${p.place} (${p.country})`
-    placeLatLongDiv.innerText = `Lat: ${p.lat} / Long: ${p.long}`
+    placeHeaderDiv.innerText = `${p.placeName} (${p.country})`
+    placeLatLongDiv.innerText = `${p.placeSubName || ''}`
     placeW3WDiv.innerText = `w3w: ${p.w3w}`
 
     if (p.icon!=''){ placeIconImg.src = `./images/${p.icon}.png` }
       else { placeIconImg.src = `./images/pin-default.png` }
     placeIconImg.width = 25
     placeIconImg.height = 25
-    placeIconImg.title = `Icon for ${p.place}`
+    placeIconImg.title = `Icon for ${p.placeName}`
 
     placeLeftColDiv.appendChild(placeHeaderDiv)
     placeLeftColDiv.appendChild(placeLatLongDiv)
@@ -85,17 +85,17 @@ function addNavBarItems(){
   })
 }
 
-function addMapMarkers(){
+function addMapMarkers() {
   places.forEach(p => {
     let myIcon
     if (p.icon!=''){ myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [25, 25] }) }
     else { myIcon = L.icon({ iconUrl: `./images/pin-default.png`, iconSize: [25, 25] }) }
     
-    return L.marker([p.lat,p.long],{opacity:1, title: `${p.place} (${p.country})  ///${p.w3w}`, icon: myIcon})
+    return L.marker([p.lat,p.long],{opacity:1, title: `${p.placeName} (${p.country})  ///${p.w3w}`, icon: myIcon})
             .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
             .addTo(map)})
 }
 
-function clickedPlace(e) {  
+function clickedPlace(e) {
   map.panTo([places[e.target.id-1].lat, places[e.target.id-1].long])
 }
