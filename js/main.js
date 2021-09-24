@@ -22,19 +22,21 @@ let Stadia_AlidadeSmoothDark = L.tileLayer(
   'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
   { maxZoom: 20, 
     attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
-
+  
+    let map = L.map("mapDiv", {
+      center: [places[0].lat,places[0].long],
+      //center: [51.3173, -0.5578],
+      //center: [places[places.length-1].lat,places[places.length-1].long],
+      zoom: 15,
+    })
 
 
 window.onload = function() {
-  let map = L.map("mapDiv", {
-    center: [places[0].lat,places[0].long],
-    //center: [51.3173, -0.5578],
-    //center: [places[places.length-1].lat,places[places.length-1].long],
-    zoom: 15,
-  })
+
 
   map.addLayer(Stadia_AlidadeSmoothDark);
 
+   //ADD MAP MARKERS
   places.forEach(p => {
     let myIcon
     if (p.icon!=''){ myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [25, 25] }) }
@@ -44,49 +46,52 @@ window.onload = function() {
             .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
             .addTo(map)})
 
-places.forEach(p => {
-  let placeDiv = document.createElement("div")
-  let placeLeftColDiv = document.createElement("div")
-  let placeRightColDiv = document.createElement("div")
-  let placeHeaderDiv = document.createElement("div")
-  let placeLatLongDiv = document.createElement("div")
-  let placeW3WDiv = document.createElement("div")
-  let placeIconDiv = document.createElement("div")
-  let placeIconImg = document.createElement("img")
+  //CREATE DIVS FOR THE NAV BAR
+  places.forEach(p => {
+    let placeDiv = document.createElement("div")
+    let placeLeftColDiv = document.createElement("div")
+    let placeRightColDiv = document.createElement("div")
+    let placeHeaderDiv = document.createElement("div")
+    let placeLatLongDiv = document.createElement("div")
+    let placeW3WDiv = document.createElement("div")
+    let placeIconDiv = document.createElement("div")
+    let placeIconImg = document.createElement("img")
 
-  placeHeaderDiv.innerText = `${p.place} (${p.country})`
-  placeLatLongDiv.innerText = `Lat: ${p.lat} / Long: ${p.long}`
-  placeW3WDiv.innerText = `w3w: ${p.w3w}`
+    placeHeaderDiv.innerText = `${p.place} (${p.country})`
+    placeLatLongDiv.innerText = `Lat: ${p.lat} / Long: ${p.long}`
+    placeW3WDiv.innerText = `w3w: ${p.w3w}`
 
-  if (p.icon!=''){ placeIconImg.src = `./images/${p.icon}.png` }
-    else { placeIconImg.src = `./images/pin-default.png` }
-  placeIconImg.width = 25
-  placeIconImg.height = 25
-  placeIconImg.title = `Icon for ${p.place}`
+    if (p.icon!=''){ placeIconImg.src = `./images/${p.icon}.png` }
+      else { placeIconImg.src = `./images/pin-default.png` }
+    placeIconImg.width = 25
+    placeIconImg.height = 25
+    placeIconImg.title = `Icon for ${p.place}`
 
-  placeLeftColDiv.appendChild(placeHeaderDiv)
-  placeLeftColDiv.appendChild(placeLatLongDiv)
-  placeLeftColDiv.appendChild(placeW3WDiv)
-  
-  placeIconDiv.appendChild(placeIconImg)
+    placeLeftColDiv.appendChild(placeHeaderDiv)
+    placeLeftColDiv.appendChild(placeLatLongDiv)
+    placeLeftColDiv.appendChild(placeW3WDiv)
+    
+    placeIconDiv.appendChild(placeIconImg)
 
-  placeRightColDiv.appendChild(placeIconDiv)
+    placeRightColDiv.appendChild(placeIconDiv)
 
-  placeDiv.classList.add("placeDiv")
-  placeHeaderDiv.classList.add("placeHeaderDiv")
-  placeLatLongDiv.classList.add("placeLatLongDiv")
-  placeW3WDiv.classList.add("placeW3WDiv")
-  placeIconDiv.classList.add("placeIconDiv")
-  placeRightColDiv.classList.add("placeRightColDiv")
+    placeDiv.classList.add("placeDiv")
+    placeHeaderDiv.classList.add("placeHeaderDiv")
+    placeLatLongDiv.classList.add("placeLatLongDiv")
+    placeW3WDiv.classList.add("placeW3WDiv")
+    placeIconDiv.classList.add("placeIconDiv")
+    placeRightColDiv.classList.add("placeRightColDiv")
+    
+    placeHeaderDiv.id = p.placeId
+    placeHeaderDiv.addEventListener('click',clickedPlace)
 
-  placeDiv.appendChild(placeLeftColDiv)
-  placeDiv.appendChild(placeRightColDiv)
-  placeDiv.addEventListener('click',clickedPlace)
+    placeDiv.appendChild(placeLeftColDiv)
+    placeDiv.appendChild(placeRightColDiv)
 
-  document.getElementById("leftNav").appendChild(placeDiv)
+    document.getElementById("leftNav").appendChild(placeDiv)
 })
 };
 
-function clickedPlace() {
-  alert("Hello")
+function clickedPlace(e) {  
+  map.panTo([places[e.target.id-1].lat, places[e.target.id-1].long])
 }

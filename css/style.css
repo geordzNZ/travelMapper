@@ -65,7 +65,7 @@ h1 {
   height: 92vh;
 }
 .placeDiv{
-  cursor: pointer;
+  /* cursor: pointer; */
   background: rgba(105, 105, 155, 0.3);
   border: 1px solid blue;
   border-radius: 5px;
@@ -77,6 +77,11 @@ h1 {
 }
 .placeHeaderDiv{
   font-weight: bold;
+  cursor: pointer;
+}
+.placeHeaderDiv:hover{
+  text-decoration: underline;
+  color: blue
 }
 .placeLatLongDiv, .placeW3WDiv{
   font-style: italic;
