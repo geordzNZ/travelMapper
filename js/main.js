@@ -18,10 +18,10 @@ const places = [
   { placeId: 17, place: 'Woking - Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black'},
   { placeId: 18, place: 'Woking - Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: ''}]
 
-let Stadia_AlidadeSmoothDark = L.tileLayer(
-  'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
-  { maxZoom: 20, 
-    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
+  let Stadia_AlidadeSmoothDark = L.tileLayer(
+    'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
+      { maxZoom: 20, 
+        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
   
     let map = L.map("mapDiv", {
       center: [places[0].lat,places[0].long],
@@ -32,21 +32,16 @@ let Stadia_AlidadeSmoothDark = L.tileLayer(
 
 
 window.onload = function() {
-
-
   map.addLayer(Stadia_AlidadeSmoothDark);
 
-   //ADD MAP MARKERS
-  places.forEach(p => {
-    let myIcon
-    if (p.icon!=''){ myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [25, 25] }) }
-    else { myIcon = L.icon({ iconUrl: `./images/pin-default.png`, iconSize: [25, 25] }) }
-    
-    return L.marker([p.lat,p.long],{opacity:1, title: `${p.place} (${p.country})  ///${p.w3w}`, icon: myIcon})
-            .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
-            .addTo(map)})
+  //ADD MAP MARKERS
+  addMapMarkers()
 
   //CREATE DIVS FOR THE NAV BAR
+  addNavBarItems()
+};
+
+function addNavBarItems(){
   places.forEach(p => {
     let placeDiv = document.createElement("div")
     let placeLeftColDiv = document.createElement("div")
@@ -89,8 +84,19 @@ window.onload = function() {
     placeDiv.appendChild(placeRightColDiv)
 
     document.getElementById("leftNav").appendChild(placeDiv)
-})
-};
+  })
+}
+
+function addMapMarkers(){
+  places.forEach(p => {
+    let myIcon
+    if (p.icon!=''){ myIcon = L.icon({ iconUrl: `./images/${p.icon}.png`, iconSize: [25, 25] }) }
+    else { myIcon = L.icon({ iconUrl: `./images/pin-default.png`, iconSize: [25, 25] }) }
+    
+    return L.marker([p.lat,p.long],{opacity:1, title: `${p.place} (${p.country})  ///${p.w3w}`, icon: myIcon})
+            .bindPopup(`<b>${p.place}</b>  ///${p.w3w}`)
+            .addTo(map)})
+}
 
 function clickedPlace(e) {  
   map.panTo([places[e.target.id-1].lat, places[e.target.id-1].long])
