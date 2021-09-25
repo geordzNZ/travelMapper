@@ -42,13 +42,20 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-h1 {
+h1,h3 {
   display: inline-block;
   margin: 0 0 0 5px;
   font-family: 'Carattere', cursive;
   text-shadow: 1px 1px 2px darkgreen, 0 0 1em seagreen, 0 0 0.2em green;
   letter-spacing: .25em;
+}
+
+h1 {
   font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 #mapDiv { 
@@ -88,7 +95,7 @@ h1 {
 .placeHeaderDiv:hover{
   cursor: pointer;
   text-decoration: underline;
-  color: blue
+  color: blue;
 }
 .placeSubNameDiv, .placeW3WDiv{
   font-style: italic;
@@ -105,7 +112,60 @@ img{
 img:hover{
   cursor: pointer;
 }
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: inline;
+}
+li{
+  float: right;
+  z-index: 999
+}
+li a, .dropbtn {
+  display: inline-block;
+  /* color: white; */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  z-index: 999
 
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: limegreen;
+  z-index: 999
+}
+
+li.dropdown {
+  display: inline-block;
+  z-index: 999
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.dropdownContent a {
+  color: black
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdownContent a:hover {
+  background-color: rgb(8, 143, 98);
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
 /* SCROLL BAR CHANGES */
 /* width */
 ::-webkit-scrollbar {
@@ -125,4 +185,5 @@ img:hover{
 ::-webkit-scrollbar-thumb {
   background: blue;
   border-radius: 10px;
+  text-shadow: 1px 1px 2px darkgreen, 0 0 1em seagreen, 0 0 0.2em green;
 }
