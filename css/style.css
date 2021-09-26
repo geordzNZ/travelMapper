@@ -29,10 +29,12 @@ body {
 /******************************************
 /* LAYOUT
 /*******************************************/
-/* header {
-
-} */
-
+header {
+  display: inline-block;
+}
+header + div {
+  display: inline-block;
+}
 footer {
   text-align: center;
 }
@@ -41,6 +43,7 @@ footer {
 /* ADDITIONAL STYLES
 /*******************************************/
 h1 {
+  display: inline-block;
   margin: 0 0 0 5px;
   font-family: 'Carattere', cursive;
   text-shadow: 1px 1px 2px darkgreen, 0 0 1em seagreen, 0 0 0.2em green;
