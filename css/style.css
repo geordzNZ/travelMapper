@@ -29,12 +29,9 @@ body {
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-  display: inline-block;
-}
-header + div {
-  display: inline-block;
-}
+/* header {
+
+} */
 footer {
   text-align: center;
 }
@@ -43,7 +40,7 @@ footer {
 /* ADDITIONAL STYLES
 /*******************************************/
 h1,h3 {
-  display: inline-block;
+  /* display: inline-block; */
   /* margin: 0 0 0 5px; */
   margin: 0;
   font-family: 'Carattere', cursive;
@@ -51,15 +48,11 @@ h1,h3 {
   letter-spacing: .25em;
   vertical-align: text-bottom;
 }
-
 h1 {
   font-size: 3rem;
 }
-
 h3 {
   font-size: 1.5rem;
-  vertical-align: text-bottom;
-  align-items: baseline;
 }
 
 #mapDiv { 
@@ -68,7 +61,10 @@ h3 {
   margin: 0 auto;
   border: 1px solid limegreen;
  }
-
+#layoutHeader {
+  display: grid;
+  grid-template-columns: 70% 15% 15%;
+}
 #layoutMain {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -129,6 +125,7 @@ a {
 li{
   float: right;
   z-index: 999;
+
 }
 li a, .dropbtn {
   display: inline-block;
@@ -157,7 +154,7 @@ li.dropdown {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 125px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 999;
   text-decoration: none;
@@ -168,7 +165,7 @@ li.dropdown {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
+  text-align: ;
   text-decoration: none;
   /* text-shadow: 1px 1px 2px darkgreen, 0 0 1em seagreen, 0 0 0.2em green; */
 }
@@ -203,4 +200,15 @@ li.dropdown {
   background: blue;
   border-radius: 10px;
   text-shadow: 1px 1px 2px darkgreen, 0 0 1em seagreen, 0 0 0.2em green;
+}
+
+/*DEBUGGING*/
+.dbgBorderBlack{
+  border: 1px dotted black;
+}
+.dbgBorderBlue{
+  border: 1px dotted blue;
+}
+.dbgBorderYellow{
+  border: 1px dotted yellow;
 }
