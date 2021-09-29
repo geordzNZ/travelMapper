@@ -68,8 +68,13 @@ function addNavBarItems(){
     placeRightColDiv.appendChild(placeIconImg)
 
     placeDiv.classList.add("placeDiv")
-    if (p.tag==='Home') { placeDiv.classList.add("placeHome") }
-    if (p.tag==='Work') { placeDiv.classList.add("placeWork") }
+    // if (p.tag==='Home') { placeDiv.classList.add("placeHome") }
+    // if (p.tag==='Work') { placeDiv.classList.add("placeWork") }
+    if (p.tag==='Home') {
+      placeHeaderDiv.classList.add("placeHome")
+      placeSubNameDiv.classList.add("placeHome")
+      placeW3WDiv.classList.add("placeHome")
+    }
     placeHeaderDiv.classList.add("placeHeaderDiv")
     placeSubNameDiv.classList.add("placeSubNameDiv")
     placeW3WDiv.classList.add("placeW3WDiv")

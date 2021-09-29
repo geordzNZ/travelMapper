@@ -81,14 +81,15 @@ h3 {
   display: grid;
   grid-template-columns: 80% 20%;
   width: 95%;
-  padding: 3px 0 3px 10px;
+  /* padding: 3px 0 3px 10px; */
 }
 .placeHome, .placeWork {
-  background: Blue;
-  color: limegreen;
+  background: limegreen;
+  color: blue;
 }
 .placeHeaderDiv{
   font-weight: bold;
+  padding: 3px 0 3px 10px;
 }
 .placeHeaderDiv:hover{
   cursor: pointer;
@@ -97,10 +98,14 @@ h3 {
 }
 .placeSubNameDiv, .placeW3WDiv{
   font-style: italic;
-  padding-left: 10px;
+  padding-left: 20px;
+}
+.placeLeftColDiv{
+  border-radius: 5px;
 }
 .placeRightColDiv{
   text-align: center;
+  border-radius: 5px;
 }
 img{
   margin: 12px 0;
@@ -127,6 +132,7 @@ li a, .dropbtn {
 }
 li a:hover, .dropdown:hover .dropbtn {
   background-color: limegreen;
+  border-radius: 25px;
   z-index: 999;
 }
 
