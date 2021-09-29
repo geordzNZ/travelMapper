@@ -30,7 +30,7 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-height: 4.5rem;
+  height: 4.5rem;
 }
 footer {
   text-align: center;
@@ -40,7 +40,7 @@ footer {
 /* ADDITIONAL STYLES
 /*******************************************/
 h1,h3 {
-  /* display: inline-block; */
+  display: inline-block;
   font-family: 'Carattere', cursive;
   text-shadow: 1px 1px 2px darkgreen, 0 0 1em seagreen, 0 0 0.2em green;
   letter-spacing: .25em;
@@ -54,13 +54,6 @@ h3 {
   font-size: 2rem;
   text-align: center;
 }
-
-#mapDiv { 
-  height: 92vh;
-  width: 98%;
-  margin: 0 auto;
-  border: 1px solid limegreen;
- }
 #layoutHeader {
   display: grid;
   grid-template-columns: 70% 15% 15%;
@@ -73,6 +66,13 @@ h3 {
   overflow-y: scroll;
   height: 92vh;
 }
+#mapDiv { 
+  height: 92vh;
+  width: 98%;
+  margin: 0 auto;
+  border: 1px solid limegreen;
+ }
+
 .placeDiv{
   background: rgba(105, 105, 155, 0.4);
   border: 1px solid limegreen;
@@ -114,6 +114,8 @@ ul{
   text-align: center;
   overflow: hidden;
   text-shadow: 1px 1px 2px rgb(141, 155, 141), 0 0 1em seagreen, 0 0 0.2em green;
+  height: 4.5rem;
+
 }
 li a, .dropbtn {
   display: inline-block;
@@ -139,14 +141,16 @@ li.dropdown {
   position: absolute;
   background-color:rgb(8, 143, 98);
   min-width: 125px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 999;
   text-align: center;
+  border: 1px solid lightgreen;
+  border-top: 1px solid rgb(8, 143, 98);
 }
 
 .dropdownContent a {
   color: black;
-  padding: 12px 16px;
+  padding: 10px 16px;
   display: block;
   text-shadow: 1px 1px 2px darkgreen, 0 0 1em seagreen, 0 0 0.2em green;
 }
@@ -158,6 +162,7 @@ li.dropdown {
 .dropdown:hover .dropdownContent {
   display: block;
   text-decoration: none;
+  transform: translateY(-64px);
 }
 /* SCROLL BAR CHANGES */
 /* width */
