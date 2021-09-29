@@ -84,8 +84,8 @@ h3 {
   /* padding: 3px 0 3px 10px; */
 }
 .placeHome, .placeWork {
-  background: limegreen;
-  color: blue;
+  background: rgba(105, 105, 155, 0.4);
+  color: limegreen;
 }
 .placeHeaderDiv{
   font-weight: bold;
@@ -99,6 +99,7 @@ h3 {
 .placeSubNameDiv, .placeW3WDiv{
   font-style: italic;
   padding-left: 20px;
+  color: black;
 }
 .placeLeftColDiv{
   border-radius: 5px;

@@ -3,7 +3,7 @@ const places = [
   { placeId: 2, placeName: 'Whiritoa', placeSubName: '', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow', tag: ''},
   { placeId: 3, placeName: 'Woking', placeSubName: 'ex-SAB House', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1', tag: ''},
   { placeId: 4, placeName: 'West Auckland', placeSubName: '', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow', tag: ''}, 
-  { placeId: 5, placeName: 'Brookwood', placeSubName: '', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow', tag: 'Work'},
+  { placeId: 5, placeName: 'Brookwood', placeSubName: 'Hicom', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow', tag: 'Work'},
   { placeId: 6, placeName: 'Woking', placeSubName: 'Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2', tag: ''},
   { placeId: 7, placeName: 'Woking', placeSubName: 'Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3', tag: ''},
   { placeId: 8, placeName: 'Woking', placeSubName: 'Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black', tag: ''},
@@ -71,6 +71,11 @@ function addNavBarItems(){
     // if (p.tag==='Home') { placeDiv.classList.add("placeHome") }
     // if (p.tag==='Work') { placeDiv.classList.add("placeWork") }
     if (p.tag==='Home') {
+      placeHeaderDiv.classList.add("placeHome")
+      placeSubNameDiv.classList.add("placeHome")
+      placeW3WDiv.classList.add("placeHome")
+    }
+    if (p.tag==='Work') {
       placeHeaderDiv.classList.add("placeHome")
       placeSubNameDiv.classList.add("placeHome")
       placeW3WDiv.classList.add("placeHome")
