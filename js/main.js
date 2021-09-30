@@ -24,12 +24,24 @@ const places = [
       { maxZoom: 20, 
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
 
-    let map = L.map("mapDiv", {
-      center: [places[0].lat,places[0].long],
-      //center: [51.3173, -0.5578],
-      //center: [places[places.length-1].lat,places[places.length-1].long],
-      zoom: 15,
-    })
+        let defaultPlace = places.filter(p=> p.default===true)
+        let startLat = 0
+        let startLong = 0
+    
+        if (defaultPlace.length===1) {
+          startLat = defaultPlace[0].lat
+          startLong = defaultPlace[0].long
+        } else {
+          startLat = places[places.length-1].lat
+          startLong = places[places.length-1].long
+        }
+        
+        let map = L.map("mapDiv", {
+          center: [startLat,startLong],
+          //center: [51.3173, -0.5578],
+          //center: [places[places.length-1].lat,places[places.length-1].long],
+          zoom: 15,
+        })
 
 
 // window.onload = function() {
