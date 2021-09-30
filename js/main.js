@@ -63,7 +63,7 @@ function addNavBarItems(){
     let placeW3WDiv = document.createElement("div")
     let placeIconImg = document.createElement("img")
 
-    placeHeaderDiv.innerText = `${p.placeName} (${p.country})`
+    placeHeaderDiv.innerText = `${p.default===true ? '**' : ''}${p.placeName} (${p.country})`
     placeSubNameDiv.innerText = `${p.placeSubName || ''}`
     placeW3WDiv.innerText = `w3w: ${p.w3w}`
 
