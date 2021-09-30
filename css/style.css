@@ -132,7 +132,7 @@ li a, .dropbtn {
   /* vertical-align: bottom; */
 }
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: limegreen;
+  background-color: rgba(105, 105, 155, 0.4);
   border-radius: 25px;
   z-index: 999;
 }
