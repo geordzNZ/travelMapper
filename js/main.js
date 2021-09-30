@@ -1,28 +1,29 @@
 const places = [
-  { placeId: 1, placeName: 'Woking', placeSubName: 'The Exchange', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow', tag: 'Home'},
-  { placeId: 2, placeName: 'Whiritoa', placeSubName: '', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow', tag: ''},
-  { placeId: 3, placeName: 'Woking', placeSubName: 'ex-SAB House', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1', tag: ''},
-  { placeId: 4, placeName: 'West Auckland', placeSubName: '', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow', tag: ''}, 
-  { placeId: 5, placeName: 'Brookwood', placeSubName: 'Hicom', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow', tag: 'Work'},
-  { placeId: 6, placeName: 'Woking', placeSubName: 'Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2', tag: ''},
-  { placeId: 7, placeName: 'Woking', placeSubName: 'Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3', tag: ''},
-  { placeId: 8, placeName: 'Woking', placeSubName: 'Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black', tag: ''},
-  { placeId: 9, placeName: 'Woking', placeSubName: 'Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: '', tag: ''},
-  { placeId: 10, placeName: 'Woking', placeSubName: 'The Exchange', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow', tag: 'Home'},
-  { placeId: 11, placeName: 'Whiritoa', placeSubName: '', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow', tag: ''},
-  { placeId: 12, placeName: 'Woking - ex-SAB House', placeSubName: '', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1', tag: ''},
-  { placeId: 13, placeName: 'Auckland', placeSubName: '', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow', tag: ''}, 
-  { placeId: 14, placeName: 'Brookwood', placeSubName: '', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow', tag: 'Work'},
-  { placeId: 15, placeName: 'Woking', placeSubName: 'Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2', tag: 'Rando 1'},
-  { placeId: 16, placeName: 'Woking', placeSubName: 'Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3', tag: 'Rando 2'},
-  { placeId: 17, placeName: 'Woking', placeSubName: 'Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black', tag: 'Rando 3'},
-  { placeId: 18, placeName: 'Woking', placeSubName: 'Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: '', tag: 'Rando 4'}]
+  { placeId: 1, placeName: 'Woking', placeSubName: 'The Exchange', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow', tag: 'Home', default: true},
+  { placeId: 2, placeName: 'Whiritoa', placeSubName: '', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow', tag: '', default: false},
+  { placeId: 3, placeName: 'Woking', placeSubName: 'ex-SAB House', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1', tag: '', default: false},
+  { placeId: 4, placeName: 'West Auckland', placeSubName: '', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow', tag: '', default: false}, 
+  { placeId: 5, placeName: 'Brookwood', placeSubName: 'Hicom', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow', tag: 'Work', default: false},
+  { placeId: 6, placeName: 'Woking', placeSubName: 'Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2', tag: '', default: false},
+  { placeId: 7, placeName: 'Woking', placeSubName: 'Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3', tag: '', default: false},
+  { placeId: 8, placeName: 'Woking', placeSubName: 'Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black', tag: '', default: false},
+  { placeId: 9, placeName: 'Woking', placeSubName: 'Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: '', tag: '', default: false},
+  { placeId: 10, placeName: 'Woking', placeSubName: 'The Exchange', country: 'UK', lat: 51.3173, long: -0.5578, w3w: 'solved.nests.crown', icon: 'pin-yellow', tag: 'Home', default: false},
+  { placeId: 11, placeName: 'Whiritoa', placeSubName: '', country: 'NZ', lat: -37.28695, long: 175.9043, w3w: 'dives.perishes.beacon', icon: 'pin-yellow', tag: '', default: false},
+  { placeId: 12, placeName: 'Woking - ex-SAB House', placeSubName: '', country: 'UK', lat: 51.3185, long: -0.5622, w3w: 'deals.tests.motor', icon: 'pin-red1', tag: '', default: false},
+  { placeId: 13, placeName: 'Auckland', placeSubName: '', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow', tag: '', default: false}, 
+  { placeId: 14, placeName: 'Brookwood', placeSubName: '', country: 'UK', lat: 51.3016, long: -0.6298, w3w: 'pile.meals.stocks', icon: 'pin-yellow', tag: 'Work', default: false},
+  { placeId: 15, placeName: 'Woking', placeSubName: 'Rando 1', country: 'UK', lat: 51.3160, long: -0.5522, w3w: 'TBC', icon: 'pin-red2', tag: 'Rando 1', default: false},
+  { placeId: 16, placeName: 'Woking', placeSubName: 'Rando 2', country: 'UK', lat: 51.3170, long: -0.5522, w3w: 'TBC', icon: 'pin-red3', tag: 'Rando 2', default: false},
+  { placeId: 17, placeName: 'Woking', placeSubName: 'Rando 3', country: 'UK', lat: 51.3180, long: -0.5522, w3w: 'TBC', icon: 'pin-black', tag: 'Rando 3', default: false},
+  { placeId: 18, placeName: 'Woking', placeSubName: 'Rando 4', country: 'UK', lat: 51.3190, long: -0.5522, w3w: 'TBC', icon: '', tag: 'Rando 4', default: false},
+  { placeId: 19, placeName: 'Auckland', placeSubName: '', country: 'NZ', lat: -36.85817, long: 174.6125, w3w: 'puts.behind.outraged', icon: 'pin-yellow', tag: '', default: false}]
 
   let Stadia_AlidadeSmoothDark = L.tileLayer(
     'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
       { maxZoom: 20, 
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
-  
+
     let map = L.map("mapDiv", {
       center: [places[0].lat,places[0].long],
       //center: [51.3173, -0.5578],
@@ -31,15 +32,14 @@ const places = [
     })
 
 
-window.onload = function() {
-  map.addLayer(Stadia_AlidadeSmoothDark);
-
+// window.onload = function() {
+  //ADD MAP
+    map.addLayer(Stadia_AlidadeSmoothDark);
   //ADD MAP MARKERS
-  addMapMarkers()
-
+    addMapMarkers()
   //CREATE DIVS FOR THE NAV BAR
-  addNavBarItems()
-};
+    addNavBarItems()
+// };
 
 function addNavBarItems(){
   places.forEach(p => {
