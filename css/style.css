@@ -64,10 +64,10 @@ h3 {
  }
 #leftNav{
   overflow-y: scroll;
-  height: 92vh;
+  height: 90vh;
 }
 #mapDiv { 
-  height: 92vh;
+  height: 90vh;
   width: 98%;
   margin: 0 auto;
   border: 1px solid limegreen;
